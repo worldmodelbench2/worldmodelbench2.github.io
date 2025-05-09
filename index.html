@@ -1,0 +1,569 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta name="keywords" content="eccv, workshop, computer vision, natural language processing, computer graphics, visual learning, machine learning">
+
+  <!-- <link rel="shortcut icon" href="static/img/site/favicon.png"> -->
+
+  <title>World Model Bench @ CVPR'25</title>
+  <meta name="description" content="World Model Bench, CVPR 2025 Workshop">
+
+  <!--Open Graph Related Stuff-->
+  <meta property="og:title" content="World Model Bench Workshop"/>
+  <meta property="og:url" content="https://worldmodelbench.github.io"/>
+  <meta property="og:description" content="World Model Bench, CVPR 2025 Workshop"/>
+  <meta property="og:site_name" content="World Model Bench Workshop"/>
+  <!-- <meta property="og:image" content="https://languagefor3dscenes.github.io/ICCV2023/static/img/site/teaser.jpg"/> -->
+
+  <!--Twitter Card Stuff-->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="World Model Bench Workshop"/>
+  <!-- <meta name="twitter:image" content="https://languagefor3dscenes.github.io/ICCV2023/static/img/site/teaser.jpg"> -->
+  <meta name="twitter:url" content="https://worldmodelbench.github.io"/>
+  <meta name="twitter:description" content="World Model Bench, CVPR 2025 Workshop"/>
+
+  <!-- CSS  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+  <link rel="stylesheet" href="static/css/main.css" media="screen,projection">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+
+  <style>
+
+    .people-pic {
+      max-width: 125px;
+      max-height: 125px;
+      /*width:300px;*/
+      /*height:300px;*/
+      object-fit: cover;
+      border-radius: 50%;
+  }
+  </style>
+</head>
+
+  <body>
+
+    <!-- <div class="top-strip"></div> -->
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/"></a>
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#cfp">Call for papers</a></li>
+        <li><a href="#dates">Schedule</a></li>
+        <li><a href="#speakers">Invited Speakers</a></li>
+        <li><a href="#organizers">Organizers</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <!-- <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Past Workshops <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../CVPR2021/index.html" target="__blank">CVPR 2021</a></li>
+            <li><a href="../ECCV2022/" target="__blank">ECCV 2022</a></li>
+          </ul>
+        </li> -->
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+    <div class="container">
+      <div class="page-content">
+          <p><br /></p>
+<div class="row">
+  <div class="col-xs-12">
+    <center><h1>WorldModelBench: The 1st Workshop on Benchmarking World Models</h1></center>
+    <center><h2>CVPR 2025 Workshop</h2></center>
+    <!-- <center>Room xx - June xx (8:00 - 12:00 am), 2025</center> -->
+  </div>
+</div>
+
+<hr />
+
+
+<!-- <br>
+  <center>
+  <h1 style="color:red"><a href="https://www.youtube.com/watch?v=gyJDGrbLknI">The <b>video recording</b> of this workshop is here!</a></h1>
+  </center>
+<br> -->
+
+<!-- <div class="alert alert-info" role="alert">
+  <b>Join Zoom Meeting  <a href="">here</a>.</b>
+</div> -->
+
+
+
+<!-- <div class="row" id="teaser">  
+    <div>  
+    <img src="static/img/site/teaser.jpg" style="width: 100%; height: auto;"/>
+  </div>
+</div> -->
+
+
+<!-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"> 
+  <img src="static/img/site/a.png">
+</div>
+
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"> 
+  <img src="static/img/site/b.png">
+</div>
+ -->
+
+
+
+
+
+
+<p><br /></p>
+<div class="row" id="intro">
+  <div class="col-xs-12">
+    <h2>Introduction</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+      World models refer to predictive models of physical phenomena in the world surrounding us. These models are fundamental for Physical AI agents, enabling crucial capabilities such as decision-making, planning, and counterfactual analysis. Effective world models must integrate several key components, including perception, instruction following, controllability, physical plausibility, and future prediction. Over the past year, we have seen remarkable progress in building such world models – from video models trained with text-only conditioning to those leveraging richer conditioning sources (image, video, control). Research teams from both academia and industry have released numerous open-source and proprietary models.
+    </p>
+    <p>
+      This proliferation of world models opens doors to their use in several downstream applications, ranging from content creation, autonomous driving, to robotics. However, these models vary substantially in their training methodologies, data recipes, architectural designs, and input conditioning approaches. As a research community, we are compelled to critically examine their capabilities through comprehensive evaluation. This requires not only identifying relevant evaluation criteria (e.g., physical correctness, alignment with input prompts, generalizability) but also developing appropriate metrics and establishing standardized evaluation methodologies for fair assessment.
+    </p>
+    <p>
+      The goal of the WorldModelBench workshop is to provide a forum to facilitate in-depth discussions on evaluating world models. The workshop will cover a range of topics, including but not limited to:
+      <ul>
+        <li>Designing accessible benchmarks for evaluating world models</li>
+        <li>Designing methodology, protocols and metrics for quantitative evaluation</li>
+        <li>Downstream evaluation of models through different tasks</li>
+        <li>Considerations surrounding safety and bias in world models</li>
+      </ul>
+    </p>
+  </div>
+</div>
+
+<p><br /></p>
+
+<div class="row" id="cfp">
+  <div class="col-xs-12">
+    <h2>Call For Papers</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+      <p>
+        We welcome submissions on any aspects related to evaluating world-models, including but not limited to:
+      </p>
+      <ul>
+        <li>Methods for developing world (and video) models, including novel architectures, training approaches, and scaling strategies</li>
+        <li>Applications of world foundation models and video generation models to downstream embodied tasks, such as robotics and autonomous driving</li>
+        <li>Novel metrics, benchmarks or datasets to evaluate world models</li>
+        <li>Analysis of safety considerations and potential biases in world foundation models and video generation models</li>
+      </ul>
+      <p>
+        <span style="font-weight:500;">Submission Guideline:</span> 
+        <ul>
+          <li>Submission website: <a href="https://openreview.net/group?id=thecvf.com/CVPR/2025/Workshop/WorldModelBench&referrer=%5BHomepage%5D(%2F)#tab-your-consoles">openreview submission page</a></li>
+          <li>Our workshop accepts both full paper submissions (4-8 pages excluding references) and extended abstract submissions (2-4 pages including references).</li>
+          <li>Full paper submissions (4-8 pages excluding references) should NOT be published before. Please refer to CVPR 2025 author guidelines: <a href="https://cvpr.thecvf.com/Conferences/2025/AuthorGuidelines">https://cvpr.thecvf.com/Conferences/2025/AuthorGuidelines</a></li>
+          <li>Submission Format: <a href="https://github.com/cvpr-org/author-kit/releases">official CVPR template</a> (double column; no more than 8 pages, excluding reference).</li>
+          <li>Our paper reviewing process is double blind.</li>
+        </ul>
+      </p>
+  </div>
+</div>                                                                                        
+<!-- 
+<p><br /></p>
+<div class="row" id="cfp">
+  <div class="col-xs-12">
+    <h2>Accepted Papers</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <table>
+      <tbody> 
+      <tr><td><a href="https://arxiv.org/abs/2212.01558">#1. PartSLIP: Low-Shot Part Segmentation for 3D Point Clouds via Pretrained Image-Language Models</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="gray">Minghua Liu, Yinhao Zhu, Hong Cai, Shizhong Han, Zhan Ling, Fatih Porikli, Hao Su</font></td></tr>
+      <tr><td><a href="https://arxiv.org/abs/2112.08359">#2. 3D Question Answering</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="gray">Shuquan Ye, Dongdong Chen, Songfang Han, Jing Liao</font></td></tr>
+      <tr><td><a href="https://arxiv.org/abs/2211.11682">#3. PointCLIP V2: Prompting CLIP and GPT for Powerful 3D Open-world Learning</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="gray">Xiangyang Zhu, Renrui Zhang, Bowei He, Ziyu Guo, Ziyao Zeng, Zipeng Qin, Shanghang Zhang, Peng Gao</font></td> </tr>        
+      <tr><td><a href="https://arxiv.org/abs/2211.16312">#4. PLA: Language-Driven Open-Vocabulary 3D Scene Understanding</a> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="gray">Runyu Ding, Jihan Yang, Chuhui Xue, Wenqing Zhang, Song Bai, Xiaojuan Qi</font></td></tr>
+      <tr><td><a href="https://arxiv.org/abs/2303.16894">#5. ViewRefer: Grasp the Multi-view Knowledge for 3D Visual Grounding</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="gray">Zoey Guo, Yiwen Tang, Ray Zhang, Dong Wang, Zhigang Wang, Bin Zhao, Xuelong Li</font></td></tr>
+      <tr><td><a href="https://arxiv.org/abs/2211.15654">#6.  OpenScene: 3D Scene Understanding with Open Vocabularies</a> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="gray">Songyou Peng, Kyle Genova, Chiyu "Max" Jiang, Andrea Tagliasacchi, Marc Pollefeys, Thomas Funkhouser</font></td></tr>
+      <tr><td><a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Kurita_RefEgo_Referring_Expression_Comprehension_Dataset_from_First-Person_Perception_of_Ego4D_ICCV_2023_paper.pdf">#7. RefEgo: Referring Expression Comprehension Dataset from First-Person Perception of Ego4D </a> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="gray">Shuhei Kurita, Naoki Katsura, Eri Onami</font></td></tr>
+      <tr><td><a href="https://arxiv.org/abs/2303.12236">#8. SALAD: Part-Level Latent Diffusion for 3D Shape Generation and Manipulation</a> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="gray">Juil Koo, Seungwoo Yoo, Minh Hieu Nguyen, Minhyuk Sung</font></td></tr>
+      <tr><td><a href="https://3d-vista.github.io">#9. 3D-VisTA: Pre-trained Transformer for 3D Vision and Text Alignment</a> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="gray">Ziyu Zhu, Xiaojian Ma, Yixin Chen, Zhidong Deng, Siyuan Huang, Qing Li</font></td></tr>
+    </tbody></table>
+  </div>
+
+</div> -->
+
+<p><br /></p>
+
+<div class="row" id="dates">
+  <div class="col-xs-12">
+    <h2>Important Dates (Anywhere on Earth)</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <table class="table table-striped">
+      <tbody>
+        <tr>
+          <td>Paper submission deadline</td>
+          <td>April 18th, 2025</td>
+        </tr>
+        <tr>
+          <td>Notifications to accepted papers</td>
+          <td>May 16th, 2025</td>
+        </tr>
+        <tr>
+          <td>Paper camera ready</td>
+          <td>May 23th, 2025</td>
+        </tr>      
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<p><br /></p>
+<div class="row" id="schedule">
+  <div class="col-xs-12">
+    <h2>Schedule (Tentative)</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <table class="table table-striped">
+      <tbody>
+        <tr>
+          <td>Introduction and Opening Remarks</td>
+          <td>TBD</td>
+        </tr>
+        <tr>
+          <td>Spotlight Presentation 1</td>
+          <td>TBD</td>
+        </tr>
+        <tr>
+          <td>Spotlight Presentation 2</td>
+          <td>TBD</td>
+        </tr>
+        <tr>
+          <td>Spotlight Presentation 3</td>
+          <td>TBD</td>
+        </tr>
+        <tr>
+          <td>Coffee Break</td>
+          <td>TBD</td>
+        </tr>
+        <tr>
+          <td>Poster Session</td>
+          <td>TBD</td>
+        </tr>
+        <tr>
+          <td>Invited Talk 1</td>
+          <td>TBD</td>
+        </tr>
+        <tr>
+          <td>Invited Talk 2</td>
+          <td>TBD</td>
+        </tr>
+        <tr>
+          <td>Invited Talk 3</td>
+          <td>TBD</td>
+        </tr>
+        <tr>
+          <td>Roundtable Discussion</td>
+          <td>TBD</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<p><br /></p>
+<div class="row" id="speakers">
+  <div class="col-xs-12">
+    <h2>Invited Speakers</h2>
+  </div>
+</div>
+
+<!-- <p>TBD</p> -->
+
+<div class="row">
+  <div class="col-md-2">
+    <a href="https://wenhuchen.github.io/"><img class="people-pic" style="float:left;margin-right:50px;" src="static/img/people/wenhu.jpg" /></a>
+  </div>
+  <div class="col-md-10">
+    <p>
+      <b><a href="https://wenhuchen.github.io/">Wenhu Chen</a></b> is a Professor at University of Waterloo and Vector Institute, also a Research Scientist at Google Deepmind. His research interest lies in natural language processing, deep learning and multimodal learning. He aims to design models to handle complex reasoning scenarios like math problem-solving, structure knowledge grounding, etc. He received the Area Chair Award in AACL-IJCNLP 2023, the Best Paper Honorable Mention in WACV 2021, and the UCSB CS Outstanding Dissertation Award in 2021.
+    </p>
+  </div>
+</div>
+<p><br /></p>
+
+<div class="row">
+  <div class="col-md-2">
+    <a href="https://deeptigp.github.io/"><img class="people-pic" style="float:left;margin-right:50px;" src="static/img/people/deepti.png" /></a>
+  </div>
+  <div class="col-md-10">
+    <p>
+      <b><a href="https://deeptigp.github.io/">Deepti Ghadiyaram</a></b> is a Professor at Boston University and a member of Technical Staff at Runway. Her research focuses on improving the safety, interpretability, and robustness of AI systems. Previously she spent over 5 years at Meta AI Research working on image and video understanding models, fair and inclusive computer vision models, and ML explainability. She has served as a Program Chair for NeurIPS 2022 Dataset and Benchmarks track, hosted several tutorials and organized workshops and an Area Chair for CVPR, ICCV, ECCV, and NeurIPS.
+    </p>
+  </div>
+</div>
+
+
+<p><br /></p>
+<div class="row">
+  <div class="col-md-2">
+    <a href="https://aditya-grover.github.io/"><img class="people-pic" style="float:left;margin-right:50px;" src="static/img/people/aditya.jpg" /></a>
+  </div>
+  <div class="col-md-10">
+    <p>
+      <b><a href="https://aditya-grover.github.io/">Aditya Grover</a></b> is a Professor at UCLA and a co-founder of Inception Labs. He leads the Machine Intelligence (MINT) group at UCLA to develop AI systems that can interact and reason with limited supervision. His current research is at the intersection of generative models and sequential decision making. He received many prestigious awards, such as NSF Career Award, Schmidt AI 2050 Early Career Fellowship, Kavli Fellow by the US National Academy of Sciences, Outstanding Paper Award at NeurIPS, etc.
+    </p>
+  </div>
+</div>
+
+<p><br /></p>
+
+<div class="row" id="organizers">
+  <div class="col-xs-12">
+    <h2>Organizers</h2>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-xs-2">
+    <a href="https://hengcv.github.io/">
+      <img class="people-pic" src="static/img/people/heng.jpg" />
+    </a>
+    <div class="people-name">
+      <a href="https://hengcv.github.io/">Heng Wang</a>
+      <h6>NVIDIA</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://prithv1.xyz/">
+      <img class="people-pic" src="static/img/people/prithvijit.jpeg" />
+    </a>
+    <div class="people-name">
+      <a href="https://prithv1.xyz/">Prithvijit Chattopadhyay</a>
+      <h6>NVIDIA</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://github.com/mingyuliutw">
+      <img class="people-pic" src="static/img/people/mingyu.jpeg" />
+    </a>
+    <div class="people-name">
+      <a href="https://github.com/mingyuliutw">Ming-Yu Liu</a>
+      <h6>NVIDIA</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://sites.google.com/view/showlab/home?authuser=0">
+      <img class="people-pic" src="static/img/people/mike.png" />
+    </a>
+    <div class="people-name">
+      <a href="https://sites.google.com/view/showlab/home?authuser=0">Mike Zheng Shou</a>
+      <h6>National University of Singapore</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="http://zhangjiewu.github.io">
+      <img class="people-pic" src="static/img/people/jay.png" />
+    </a>
+    <div class="people-name">
+      <a href="http://zhangjiewu.github.io">Jay Zhangjie Wu</a>
+      <h6>National University of Singapore</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://xh-liu.github.io/">
+      <img class="people-pic" src="static/img/people/xihui.jpeg" />
+    </a>
+    <div class="people-name">
+      <a href="https://xh-liu.github.io/">Xihui Liu</a>
+      <h6>University of Hong Kong</h6><br><br>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://deeptigp.github.io/">
+      <img class="people-pic" src="static/img/people/deepti.png" />
+    </a>
+    <div class="people-name">
+      <a href="https://deeptigp.github.io/">Deepti Ghadiyaram</a>
+      <h6>Boston University</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://somepago.github.io/">
+      <img class="people-pic" src="static/img/people/gowthami.jpg" />
+    </a>
+    <div class="people-name">
+      <a href="https://somepago.github.io/">Gowthami Somepalli</a>
+      <h6>University of Maryland, College Park</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://www.huaxiuyao.io/">
+      <img class="people-pic" src="static/img/people/huaxiu.png" />
+    </a>
+    <div class="people-name">
+      <a href="https://www.huaxiuyao.io/">Huaxiu Yao</a>
+      <h6>University of North Carolina at Chapel Hill</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://wenhuchen.github.io/">
+      <img class="people-pic" src="static/img/people/wenhu.jpg" />
+    </a>
+    <div class="people-name">
+      <a href="https://wenhuchen.github.io/">Wenhu Chen</a>
+      <h6>University of Waterloo</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://tsong.me/">
+      <img class="people-pic" src="static/img/people/jiaming.jpeg" />
+    </a>
+    <div class="people-name">
+      <a href="https://tsong.me/">Jiaming Song</a>
+      <h6>Luma AI</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://www.humphreyshi.com/">
+      <img class="people-pic" src="static/img/people/humphrey.jpg" />
+    </a>
+    <div class="people-name">
+      <a href="https://www.humphreyshi.com/">Humphrey Shi</a>
+      <h6>Georgia Tech</h6>
+    </div>
+  </div>
+
+</div>
+<!-- <p><br /></p>
+<p><br /></p> -->
+<!-- 
+<div class="row" id="advisors">
+  <div class="col-xs-12">
+    <h2>Senior Advisors</h2>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-xs-2">
+    <a href="http://optas.github.io">
+      <img class="people-pic" src="static/img/people/achlioptas.jpg" />
+    </a>
+    <div class="people-name">
+      <a href="http://optas.github.io">Panos Achlioptas</a>
+      <h6>Steel Perlot</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://angelxuanchang.github.io/">
+      <img class="people-pic" src="static/img/people/angel.jpg" />
+    </a>
+    <div class="people-name">
+      <a href="https://angelxuanchang.github.io/">Angel X. Chang</a>
+      <h6>Simon Fraser University</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://niessnerlab.org/members/matthias_niessner/profile.html">
+      <img class="people-pic" src="static/img/people/matthias.jpg" />
+    </a>
+    <div class="people-name">
+      <a href="https://niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a>
+      <h6>Technical University of Munich</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://geometry.stanford.edu/member/guibas/">
+      <img class="people-pic" src="static/img/people/guibas.jpg" />
+    </a>
+    <div class="people-name">
+      <a href="https://geometry.stanford.edu/member/guibas/">Leonidas J. Guibas</a>
+      <h6>Stanford University</h6>
+    </div>
+  </div>
+</div> -->
+
+<p><br /></p>
+
+<div class="row" id="contact">
+  <div class="col-xs-12">
+    <h2>Contact</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <!-- <p>
+      To contact the organizers please use <b>worldmodelbench@gmail.com</b>
+    </p> -->
+    <p>
+      To contact the organizers please use <b>worldmodelbench@gmail.com</b>
+    </p>
+  </div>
+</div>
+<p><br /></p>
+
+<hr />
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Acknowledgments</h2>
+  </div>
+</div>
+<p><a name="/acknowledgements"></a></p>
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+      Thanks to <span style="color:#1a1aff;font-weight:400;"> <a href="https://languagefor3dscenes.github.io/">languagefor3dscenes</a></span> for the webpage format.
+    </p>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
